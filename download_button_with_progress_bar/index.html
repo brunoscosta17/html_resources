@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Download Button with Progress Bar in HTML CSS and JavaScript - https://www.youtube.com/watch?v=N0ZGC7COC7s</title>
+</head>
+<body>
+    <div class="button">
+        <div class="content">
+            <i class="bx bx-cloud-download"></i>
+            <span class="button-text">Download</span>
+        </div>
+    </div>
+    <script>
+        let button = document.querySelector(".button");
+        button.addEventListener("click", () => {
+            button.classList.add("active");
+            setTimeout(() => {
+                button.classList.remove("active");
+                document.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle");
+                document.querySelector(".button-text").innerHTML = "Completed";
+            }, 6000);
+            setTimeout(() => {
+                document.querySelector("i").classList.replace("bx-check-circle", "bx-cloud-download");
+                document.querySelector(".button-text").innerHTML = "Download";
+            }, 7000);
+        });
+    </script>
+</body>
+</html>
