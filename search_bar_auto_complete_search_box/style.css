@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #644bff;
+    padding: 0 20px;
+}
+
+.wrapper {
+    max-width: 450px;
+    margin: 150px auto;
+}
+
+.wrapper .search-input {
+    background: #fff;
+    /* display: flex; */
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.search-input input {
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input .icon {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.4s ease;
+    color: #644bff;
+    cursor: pointer;
+}
+
+.search-input .autocomplete-box {
+    /* padding: 10px 20px; */
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    /* position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); */
+}
+
+.search-input.active .autocomplete-box {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-input.active .autocomplete-box li {
+    display: block;
+}
+
+.autocomplete-box li {
+    list-style: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+}
+
+.autocomplete-box li:hover {
+    background: #efefef;
+    color: #000;
+    cursor: pointer;
+}
