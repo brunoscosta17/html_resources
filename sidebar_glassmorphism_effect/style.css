@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url("images/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 95px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(17px);
+    --webkit-backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: width 0.5s ease;
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    height: 60px;
+    width: 100%;
+}
+
+.logo img {
+    width: 43px;
+    border-radius: 50%;
+}
+
+.logo h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 15px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+.sidebar .links {
+    height: calc(100% - 140px); 
+    overflow-y: auto;
+    scrollbar-width: none;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar .links::-webkit-scrollbar {
+    width: 0;
+}
+
+.sidebar .links h4 {
+    color: #222;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.sidebar:hover .links h4 {
+    display: block;
+}
+
+.links li {
+    display: flex;
+    align-items: center;
+}
+
+.links li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.links hr {
+    border-color: #4c4c4c;
+    margin: 10px 8px;
+}
+
+.sidebar:hover .links hr {
+    border-color: transparent
+}
+
+.links li span {
+    padding: 12px 10px;
+}
+
+.links li a {
+    color: #000;
+    padding: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    display: none;
+    transition: width 0.4s ease;
+}
+
+.sidebar:hover .links li a {
+    display: block;
+}
